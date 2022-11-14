@@ -14,7 +14,13 @@ export class MangaService {
   }
 
   findAll() {
-    return this.prisma.manga.findMany();
+    return this.prisma.manga.findMany({
+      select: {
+        id: true,
+        name: true,
+        _count: true,
+      },
+    });
   }
 
   async findOne(id: number) {
@@ -26,6 +32,8 @@ export class MangaService {
             id: true,
             number_pages: true,
             volume_number: true,
+            bought: true,
+            read: true,
           },
         },
       },
