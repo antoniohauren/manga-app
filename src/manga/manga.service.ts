@@ -20,6 +20,15 @@ export class MangaService {
   async findOne(id: number) {
     const found = await this.prisma.manga.findUnique({
       where: { id },
+      include: {
+        volumes: {
+          select: {
+            id: true,
+            number_pages: true,
+            volume_number: true,
+          },
+        },
+      },
     });
 
     if (!found) {
