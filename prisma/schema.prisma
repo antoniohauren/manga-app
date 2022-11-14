@@ -9,3 +9,18 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Manga {
+  id Int @id @default(autoincrement())
+  name String
+  volumes Volume[]
+}
+
+model Volume {
+  id Int @id @default(autoincrement())
+  volume_number Int
+  number_pages Int
+  
+  manga Manga @relation(fields: [mangaId], references: [id])
+  mangaId Int
+}
