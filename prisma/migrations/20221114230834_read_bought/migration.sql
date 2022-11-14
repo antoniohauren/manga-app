@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Volume" ADD COLUMN     "bought" BOOLEAN NOT NULL DEFAULT false,
+ADD COLUMN     "read" BOOLEAN NOT NULL DEFAULT false;

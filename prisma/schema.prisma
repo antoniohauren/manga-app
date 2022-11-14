@@ -11,16 +11,18 @@ datasource db {
 }
 
 model Manga {
-  id Int @id @default(autoincrement())
-  name String
+  id      Int      @id @default(autoincrement())
+  name    String
   volumes Volume[]
 }
 
 model Volume {
-  id Int @id @default(autoincrement())
+  id            Int     @id @default(autoincrement())
   volume_number Int
-  number_pages Int
-  
-  manga Manga @relation(fields: [mangaId], references: [id])
+  number_pages  Int
+  bought        Boolean @default(false)
+  read          Boolean @default(false)
+
+  manga   Manga @relation(fields: [mangaId], references: [id])
   mangaId Int
 }
