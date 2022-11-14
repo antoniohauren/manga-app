@@ -6,4 +6,6 @@ export class Volume {
   volume_name: number;
   number_pages: number;
   manga: Manga;
+  read: boolean;
+  bought: boolean;
 }

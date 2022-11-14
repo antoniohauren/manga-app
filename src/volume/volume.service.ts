@@ -11,7 +11,9 @@ export class VolumeService {
     return this.prisma.volume.create({
       data: {
         number_pages: createVolumeDto.number_pages,
-        volume_number: createVolumeDto.volume_name,
+        volume_number: createVolumeDto.volume_number,
+        bought: createVolumeDto.bought,
+        read: createVolumeDto.read,
         manga: {
           connect: {
             id: createVolumeDto.mangaId,
@@ -44,7 +46,7 @@ export class VolumeService {
       where: { id },
       data: {
         number_pages: updateVolumeDto.number_pages,
-        volume_number: updateVolumeDto.volume_name,
+        volume_number: updateVolumeDto.volume_number,
         manga: {
           connect: {
             id: updateVolumeDto.mangaId,
