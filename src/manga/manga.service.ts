@@ -18,6 +18,8 @@ export class MangaService {
       select: {
         id: true,
         name: true,
+        completed: true,
+        author: true,
         _count: true,
         volumes: {
           select: {
@@ -28,10 +30,12 @@ export class MangaService {
       },
     });
 
-    return found.map(({ id, name, volumes }) => {
+    return found.map(({ id, name, completed, author, volumes }) => {
       return {
         id,
         name,
+        author,
+        completed,
         volumes: volumes.length,
         bought: volumes.filter(({ bought }) => bought).length,
         read: volumes.filter(({ read }) => read).length,
