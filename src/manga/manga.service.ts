@@ -13,13 +13,29 @@ export class MangaService {
     });
   }
 
-  findAll() {
-    return this.prisma.manga.findMany({
+  async findAll() {
+    const found = await this.prisma.manga.findMany({
       select: {
         id: true,
         name: true,
         _count: true,
+        volumes: {
+          select: {
+            bought: true,
+            read: true,
+          },
+        },
       },
+    });
+
+    return found.map(({ id, name, volumes }) => {
+      return {
+        id,
+        name,
+        volumes: volumes.length,
+        bought: volumes.filter(({ bought }) => bought).length,
+        read: volumes.filter(({ read }) => read).length,
+      };
     });
   }
 
