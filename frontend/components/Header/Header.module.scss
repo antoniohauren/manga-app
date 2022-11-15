@@ -3,4 +3,13 @@
 .container {
     background-color: $dark-color;
     min-height: 4rem;
+    color: $ligh-text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
 }

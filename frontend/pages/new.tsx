@@ -1,13 +1,15 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 
-export default function Home() {
+function NewMangaPage() {
   return (
     <>
       <Head>
-        <title>Mangas</title>
+        <title>New Manga</title>
       </Head>
       <Header />
     </>
   );
 }
+
+export default NewMangaPage;
