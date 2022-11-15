@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Header from '../components/Header';
+import BaseTemplate from '../components/BaseTemplate';
 
 function NewMangaPage() {
   return (
@@ -7,7 +7,7 @@ function NewMangaPage() {
       <Head>
         <title>New Manga</title>
       </Head>
-      <Header />
+      <BaseTemplate>qweqwe</BaseTemplate>
     </>
   );
 }

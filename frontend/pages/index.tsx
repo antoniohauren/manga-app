@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Header from '../components/Header';
+import BaseTemplate from '../components/BaseTemplate';
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Mangas</title>
       </Head>
-      <Header />
+      <BaseTemplate></BaseTemplate>
     </>
   );
 }
