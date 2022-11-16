@@ -3,15 +3,16 @@ import S from './MangaRow.module.scss';
 
 function MangaRow({ author, name, bought, read, volumes }: MangaRowProps) {
   return (
-    <section className={S.wrapper}>
-      <p>{name}</p>
-      <p>{author}</p>
-      <p>{bought}</p>
-      <p>{read}</p>
-      <p>{volumes}</p>
-
+    <div className={S.wrapper}>
+      <section className={S.row}>
+        <p>{name}</p>
+        <p>{author}</p>
+        <p>{bought}</p>
+        <p>{read}</p>
+        <p>{volumes}</p>
+      </section>
       <button>X</button>
-    </section>
+    </div>
   );
 }
 

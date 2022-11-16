@@ -2,6 +2,7 @@ import axios from 'axios';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import BaseTemplate from '../components/BaseTemplate';
+import MangaListHeader from '../components/MangaListHeader';
 import MangaRow from '../components/MangaRow';
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
         <title>Mangas</title>
       </Head>
       <BaseTemplate>
+        <MangaListHeader />
         {mangas.map((manga) => {
           return (
             <MangaRow
