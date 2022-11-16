@@ -1,6 +1,6 @@
 export type UpsertMangaFormProps = {
   isUpdating?: boolean;
-  defaultValues: {
+  defaultValues?: {
     name: string;
     author: string;
     completed: boolean;
