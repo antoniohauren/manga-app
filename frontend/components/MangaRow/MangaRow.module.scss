@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    background-color: $dark-color;
+    padding-inline: 1rem;
+    color: $light-text;
+    border-radius: 0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    p {
+        width: 100%;
+        min-width: 3rem;
+    }
+
+    p:first-of-type {
+        min-width: 30%;
+    }
+
+    p:nth-child(2) {
+        min-width: 30%;
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
