@@ -31,7 +31,13 @@ function MangaDetails() {
         <h1>volumes</h1>
 
         {volumes?.map((volume) => {
-          return <VolumeRow key={volume.id} {...volume} />;
+          return (
+            <VolumeRow
+              key={volume.id}
+              {...volume}
+              setInvalidate={setInvalidate}
+            />
+          );
         })}
 
         <VolumeForm
