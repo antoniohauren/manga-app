@@ -25,6 +25,6 @@ model Volume {
   bought        Boolean @default(false)
   read          Boolean @default(false)
 
-  manga   Manga @relation(fields: [mangaId], references: [id])
+  manga   Manga @relation(fields: [mangaId], references: [id], onDelete: Cascade)
   mangaId Int
 }
