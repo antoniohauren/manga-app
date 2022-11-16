@@ -3,8 +3,8 @@
 .wrapper {
     display: flex;
     padding-inline: 1rem;
-    max-width: 90%;
-    
+    width: calc(100% - (50px + 1rem));
+
     gap: 2rem;
     p {
         width: 100%;
