@@ -8,7 +8,7 @@ function Header({ children }: HeaderProps) {
       {children}
       <nav className={S.nav}>
         <Link href="/">Home</Link>
-        <Link href="/new">New manga</Link>
+        <Link href="/manga/new">New manga</Link>
       </nav>
     </header>
   );

@@ -1,8 +1,8 @@
 import axios from 'axios';
 import Head from 'next/head';
 import { FormEvent, useState } from 'react';
-import { CreateMangaDto } from '../../src/manga/dto/create-manga.dto';
-import BaseTemplate from '../components/BaseTemplate';
+import { CreateMangaDto } from '../../../src/manga/dto/create-manga.dto';
+import BaseTemplate from '../../components/BaseTemplate';
 
 function NewMangaPage() {
   const [name, setName] = useState('');

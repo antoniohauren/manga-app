@@ -40,6 +40,7 @@ export default function Home() {
             return (
               <MangaRow
                 key={manga.id}
+                id={manga.id}
                 author={manga.author}
                 name={manga.name}
                 bought={manga.bought}

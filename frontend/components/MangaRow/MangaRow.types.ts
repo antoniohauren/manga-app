@@ -1,4 +1,5 @@
 export type MangaRowProps = {
+  id: number;
   name: string;
   author: string;
   read: number;
