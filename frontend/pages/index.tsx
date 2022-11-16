@@ -1,32 +1,15 @@
-import axios from 'axios';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import BaseTemplate from '../components/BaseTemplate';
 import MangaList from '../components/MangaList';
 import MangaListHeader from '../components/MangaListHeader';
 import MangaRow from '../components/MangaRow';
+import useApiListMangas from '../hooks/api/useApiListManga';
 
 export default function Home() {
-  const [mangas, setMangas] = useState<
-    {
-      id: number;
-      name: string;
-      author: string;
-      bought: number;
-      read: number;
-      volumes: number;
-    }[]
-  >([]);
+  const [invalidate, setInvalidate] = useState(false);
 
-  useEffect(() => {
-    (async () => {
-      const { data } = await axios.get('http://localhost:3333/manga');
-
-      console.log(data);
-
-      setMangas(data);
-    })();
-  }, []);
+  const mangas = useApiListMangas(invalidate);
 
   return (
     <>
@@ -36,9 +19,10 @@ export default function Home() {
       <BaseTemplate>
         <MangaListHeader />
         <MangaList>
-          {mangas.map((manga) => {
+          {mangas?.map((manga) => {
             return (
               <MangaRow
+                setInvalidate={setInvalidate}
                 key={manga.id}
                 id={manga.id}
                 author={manga.author}
