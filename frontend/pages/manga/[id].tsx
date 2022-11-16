@@ -4,14 +4,20 @@ import { useRouter } from 'next/router';
 import { FormEvent, useEffect, useState } from 'react';
 import BaseTemplate from '../../components/BaseTemplate';
 import { UpdateMangaDto } from '../../../src/manga/dto/update-manga.dto';
+import { Volume } from '../../../src/volume/entities/volume.entity';
+import VolumeRow from '../../components/VolumeRow';
+import VolumeForm from '../../components/VolumeForm';
 
 function MangaDetails() {
   const router = useRouter();
   const { id: mangaId } = router.query;
 
+  const [invalidate, setInvalidate] = useState(false);
   const [name, setName] = useState('');
   const [author, setAuthor] = useState('');
   const [completed, setCompleted] = useState(false);
+  // volume
+  const [volumes, setVolumes] = useState<Omit<Volume, 'manga'>[]>([]);
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -43,8 +49,9 @@ function MangaDetails() {
       setName(data.name);
       setAuthor(data.author);
       setCompleted(data.completed);
+      setVolumes(data.volumes);
     })();
-  }, [mangaId]);
+  }, [mangaId, invalidate]);
 
   return (
     <>
@@ -81,6 +88,14 @@ function MangaDetails() {
           </label>
           <button>Cadastrar</button>
         </form>
+
+        <h1>volumes</h1>
+
+        {volumes.map((volume) => {
+          return <VolumeRow key={volume.id} {...volume} />;
+        })}
+
+        <VolumeForm setInvalidate={setInvalidate} volumes={volumes?.length} />
       </BaseTemplate>
     </>
   );
