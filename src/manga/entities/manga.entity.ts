@@ -1,5 +1,4 @@
-import { Volume } from 'src/volume/entities/volume.entity';
-
+import { Volume } from '../../volume/entities';
 export class Manga {
   id: number;
   name: string;
