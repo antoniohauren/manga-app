@@ -5,8 +5,10 @@
   gap: 1rem;
 
   button {
-    width: 50px;
-    height: 50px;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid $dark-color;
+    border-radius: 0.5rem;
     cursor: pointer;
   }
 }
@@ -38,10 +40,11 @@
 
 .trash {
   border: none;
-  background-color: transparent;
+  background-color: $light-text;
   color: $dark-color;
 
   &:hover {
+    background-color: $dark-color;
     color: $light-text;
   }
 }
