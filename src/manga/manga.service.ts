@@ -15,6 +15,9 @@ export class MangaService {
 
   async findAll() {
     const found = await this.prisma.manga.findMany({
+      orderBy: {
+        name: 'asc',
+      },
       select: {
         id: true,
         name: true,
@@ -48,6 +51,9 @@ export class MangaService {
       where: { id },
       include: {
         volumes: {
+          orderBy: {
+            volume_number: 'asc',
+          },
           select: {
             id: true,
             number_pages: true,
