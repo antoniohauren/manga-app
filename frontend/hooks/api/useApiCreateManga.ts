@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { CreateMangaDto } from '@domain/manga/dto';
+import axios from 'axios';
 
 function useApiCreateManga() {
   async function exec(body: CreateMangaDto) {

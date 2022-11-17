@@ -1,10 +1,10 @@
-import Head from 'next/head';
 import BaseTemplate from '@components/BaseTemplate';
-import VolumeRow from '@components/VolumeRow';
-import VolumeForm from '@components/VolumeForm';
 import UpsertMangaForm from '@components/UpsertMangaForm';
+import VolumeForm from '@components/VolumeForm';
+import VolumeRow from '@components/VolumeRow';
 import { useApiGetManga } from '@hooks/api';
 import { useMangaId } from '@hooks/useMangaId';
+import Head from 'next/head';
 import { useState } from 'react';
 
 function MangaDetails() {

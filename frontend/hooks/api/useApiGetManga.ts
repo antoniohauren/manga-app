@@ -1,6 +1,6 @@
+import { Volume } from '@domain/volume/entities';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Volume } from '@domain/volume/entities';
 
 function useApiGetManga(id: number | undefined, invalidate: boolean) {
   const [name, setName] = useState('');

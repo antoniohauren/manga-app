@@ -1,7 +1,8 @@
 import { FormEvent, useEffect, useState } from 'react';
 import { CreateMangaDto } from '@domain/manga/dto/create-manga.dto';
 import { useApiCreateManga, useApiUpdateManga } from '@hooks/api';
-import { UpsertMangaFormProps } from './UpsertMangaForm.types';
+import { UpsertMangaFormProps } from '.';
+
 import S from './UpsertMangaForm.module.scss';
 
 function UpsertMangaForm({

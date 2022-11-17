@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
-import CreateIcon from '@assets/CreateIcon';
-import { useApiCreateVolume } from '@hooks/api';
-import { VolumeFormProps } from './VolumeForm.types';
-import S from './VolumeForm.module.scss';
-import ReadIcon from '@assets/ReadIcon';
 import CartIcon from '@assets/CartIcon';
+import CreateIcon from '@assets/CreateIcon';
+import ReadIcon from '@assets/ReadIcon';
+import { useApiCreateVolume } from '@hooks/api';
+import { useEffect, useState } from 'react';
+import { VolumeFormProps } from '.';
+
+import S from './VolumeForm.module.scss';
 
 function VolumeForm({ volumes, setInvalidate }: VolumeFormProps) {
   const [pages, setPages] = useState('');

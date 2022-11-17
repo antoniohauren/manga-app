@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import { useState } from 'react';
 import BaseTemplate from '@components/BaseTemplate';
 import MangaList from '@components/MangaList';
 import MangaListHeader from '@components/MangaListHeader';
 import MangaRow from '@components/MangaRow';
 import { useApiListMangas } from '@hooks/api';
+import Head from 'next/head';
+import { useState } from 'react';
 
 export default function Home() {
   const [invalidate, setInvalidate] = useState(false);

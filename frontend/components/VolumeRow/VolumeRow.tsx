@@ -1,13 +1,14 @@
-import { VolumeRowProps } from './VolumeRow.types';
-import S from './VolumeRow.module.scss';
+import CartIcon from '@assets/CartIcon';
+import ReadIcon from '@assets/ReadIcon';
+import TrashIcon from '@assets/TrashIcon';
 import {
+  UpdateVolume,
   useApiDeleteVolume,
   useApiUpdateVolume,
-  UpdateVolume,
 } from '@hooks/api';
-import ReadIcon from '@assets/ReadIcon';
-import CartIcon from '@assets/CartIcon';
-import TrashIcon from '@assets/TrashIcon';
+import { VolumeRowProps } from '.';
+
+import S from './VolumeRow.module.scss';
 
 function VolumeRow({
   id,

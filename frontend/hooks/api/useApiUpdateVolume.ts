@@ -1,6 +1,6 @@
+import { UpdateVolumeDto } from '@domain/volume/dto';
 import axios from 'axios';
 import { Dispatch, SetStateAction } from 'react';
-import { UpdateVolumeDto } from '@domain/volume/dto';
 
 export type UpdateVolume = Pick<UpdateVolumeDto, 'bought' | 'read'>;
 

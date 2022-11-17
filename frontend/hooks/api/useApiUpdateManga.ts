@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { useMangaId } from '@hooks/useMangaId';
 import { UpdateMangaDto } from '@domain/manga/dto';
+import { useMangaId } from '@hooks/useMangaId';
+import axios from 'axios';
 
 function useApiUpdateManga() {
   const id = useMangaId();
