@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import CreateIcon from '../../assets/CreateIcon';
 import useApiCreateVolume from '../../hooks/api/useApiCreateVolume';
 import { VolumeFormProps } from './VolumeForm.types';
 
@@ -58,8 +59,8 @@ function VolumeForm({ volumes, setInvalidate }: VolumeFormProps) {
         Bought
       </label>
 
-      <button type="button" onClick={handleAddVolume}>
-        +
+      <button style={{ width: '40px' }} type="button" onClick={handleAddVolume}>
+        <CreateIcon />
       </button>
     </form>
   );

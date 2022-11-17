@@ -2,6 +2,7 @@ import { MangaRowProps } from './MangaRow.types';
 import S from './MangaRow.module.scss';
 import Link from 'next/link';
 import useApiDeleteManga from '../../hooks/api/useApiDeleteManga';
+import TrashIcon from '../../assets/TrashIcon';
 
 function MangaRow({
   id,
@@ -32,7 +33,9 @@ function MangaRow({
         <p>{volumes}</p>
       </Link>
 
-      <button onClick={handleDelete}>X</button>
+      <button className={S.trash} onClick={handleDelete}>
+        <TrashIcon />
+      </button>
     </div>
   );
 }

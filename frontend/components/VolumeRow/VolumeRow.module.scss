@@ -1,6 +1,19 @@
+@import '../../styles/variables.scss';
+
 .wrapper {
     display: flex;
     gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+
+    button {
+        width: 40px;
+        height: 40px;
+    }
+
+    border-bottom: 1px solid $dark-color;
 }
 
 .off {
@@ -9,4 +22,20 @@
 
 .on {
     color: green;
+}
+
+.infos {
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.trash {
+    border: none;
+    background-color: transparent;
+    color: $dark-color;
 }

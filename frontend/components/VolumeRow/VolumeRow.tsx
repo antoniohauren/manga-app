@@ -4,6 +4,9 @@ import useApiDeleteVolume from '../../hooks/api/useApiDeleteVolume';
 import useApiUpdateVolume, {
   UpdateVolume,
 } from '../../hooks/api/useApiUpdateVolume';
+import ReadIcon from '../../assets/ReadIcon';
+import CartIcon from '../../assets/CartIcon';
+import TrashIcon from '../../assets/TrashIcon';
 
 function VolumeRow({
   id,
@@ -29,25 +32,34 @@ function VolumeRow({
   }
 
   return (
-    <div className={S.wrapper}>
-      <p>Volume {volume_number.toString().padStart(3, '0')}</p>
-      <p>{number_pages}</p>
+    <section className={S.wrapper}>
+      <div className={S.infos}>
+        <p>Volume {volume_number.toString().padStart(3, '0')}</p>
+        <p>{number_pages.toString().padStart(4, '0')} Pages</p>
+      </div>
 
-      <button
-        className={read ? S.on : S.off}
-        onClick={() => handleUpdate({ read: !read })}
-      >
-        read
-      </button>
-      <button
-        className={bought ? S.on : S.off}
-        onClick={() => handleUpdate({ bought: !bought })}
-      >
-        bought
-      </button>
+      <div className={S.buttons}>
+        <button
+          className={read ? S.on : S.off}
+          onClick={() => handleUpdate({ read: !read })}
+          title="Read"
+        >
+          <ReadIcon />
+        </button>
 
-      <button onClick={handleDelete}>X</button>
-    </div>
+        <button
+          className={bought ? S.on : S.off}
+          onClick={() => handleUpdate({ bought: !bought })}
+          title="Bought"
+        >
+          <CartIcon />
+        </button>
+
+        <button onClick={handleDelete}>
+          <TrashIcon />
+        </button>
+      </div>
+    </section>
   );
 }
 

@@ -10,6 +10,7 @@
         cursor: pointer;
     }
 }
+
 .row {
     background-color: $dark-color;
     padding-inline: 1rem;
@@ -33,4 +34,10 @@
     p:nth-child(2) {
         min-width: 30%;
     }
+}
+
+.trash {
+    border: none;
+    background-color: transparent;
+    color: $dark-color;
 }
