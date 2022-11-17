@@ -1,6 +1,6 @@
 import axios from 'axios';
-import useMangaId from '../useMangaId';
-import { UpdateMangaDto } from '../../../src/manga/dto/update-manga.dto';
+import { useMangaId } from '@hooks/useMangaId';
+import { UpdateMangaDto } from '@domain/manga/dto';
 
 function useApiUpdateManga() {
   const id = useMangaId();
@@ -17,4 +17,4 @@ function useApiUpdateManga() {
   return { exec };
 }
 
-export default useApiUpdateManga;
+export { useApiUpdateManga };

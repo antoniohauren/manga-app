@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import CreateIcon from '../../assets/CreateIcon';
-import useApiCreateVolume from '../../hooks/api/useApiCreateVolume';
+import { useApiCreateVolume } from '@hooks/api';
 import { VolumeFormProps } from './VolumeForm.types';
 import S from './VolumeForm.module.scss';
 import ReadIcon from '../../assets/ReadIcon';

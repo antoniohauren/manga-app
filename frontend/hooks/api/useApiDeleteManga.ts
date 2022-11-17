@@ -14,4 +14,4 @@ function useApiDeleteManga(setInvalidate: Dispatch<SetStateAction<boolean>>) {
   return { exec };
 }
 
-export default useApiDeleteManga;
+export { useApiDeleteManga };

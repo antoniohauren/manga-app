@@ -14,4 +14,4 @@ function useApiDeleteVolume(setInvalidate: Dispatch<SetStateAction<boolean>>) {
   return { exec };
 }
 
-export default useApiDeleteVolume;
+export { useApiDeleteVolume };

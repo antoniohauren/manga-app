@@ -1,9 +1,10 @@
 import { VolumeRowProps } from './VolumeRow.types';
 import S from './VolumeRow.module.scss';
-import useApiDeleteVolume from '../../hooks/api/useApiDeleteVolume';
-import useApiUpdateVolume, {
+import {
+  useApiDeleteVolume,
+  useApiUpdateVolume,
   UpdateVolume,
-} from '../../hooks/api/useApiUpdateVolume';
+} from '@hooks/api';
 import ReadIcon from '../../assets/ReadIcon';
 import CartIcon from '../../assets/CartIcon';
 import TrashIcon from '../../assets/TrashIcon';

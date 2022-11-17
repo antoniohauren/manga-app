@@ -1,7 +1,7 @@
 import { MangaRowProps } from './MangaRow.types';
 import S from './MangaRow.module.scss';
 import Link from 'next/link';
-import useApiDeleteManga from '../../hooks/api/useApiDeleteManga';
+import { useApiDeleteManga } from '@hooks/api/useApiDeleteManga';
 import TrashIcon from '../../assets/TrashIcon';
 
 function MangaRow({

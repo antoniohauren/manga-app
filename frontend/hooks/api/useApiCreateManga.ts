@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CreateMangaDto } from '../../../src/manga/dto/create-manga.dto';
+import { CreateMangaDto } from '@domain/manga/dto';
 
 function useApiCreateManga() {
   async function exec(body: CreateMangaDto) {
@@ -14,4 +14,4 @@ function useApiCreateManga() {
   return { exec };
 }
 
-export default useApiCreateManga;
+export { useApiCreateManga };

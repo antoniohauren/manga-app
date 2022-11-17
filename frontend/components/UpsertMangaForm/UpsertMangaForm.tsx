@@ -1,10 +1,8 @@
 import { FormEvent, useEffect, useState } from 'react';
-import { CreateMangaDto } from '../../../src/manga/dto/create-manga.dto';
-import useApiCreateManga from '../../hooks/api/useApiCreateManga';
-import useApiUpdateManga from '../../hooks/api/useApiUpdateManga';
+import { CreateMangaDto } from '@domain/manga/dto/create-manga.dto';
+import { useApiCreateManga, useApiUpdateManga } from '@hooks/api';
 import { UpsertMangaFormProps } from './UpsertMangaForm.types';
 import S from './UpsertMangaForm.module.scss';
-import CreateIcon from '../../assets/CreateIcon';
 
 function UpsertMangaForm({
   isUpdating = false,

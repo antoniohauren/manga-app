@@ -3,8 +3,8 @@ import BaseTemplate from '../../components/BaseTemplate';
 import VolumeRow from '../../components/VolumeRow';
 import VolumeForm from '../../components/VolumeForm';
 import UpsertMangaForm from '../../components/UpsertMangaForm';
-import useApiGetManga from '../../hooks/api/useApiGetManga';
-import useMangaId from '../../hooks/useMangaId';
+import { useApiGetManga } from '@hooks/api';
+import { useMangaId } from '@hooks/useMangaId';
 import { useState } from 'react';
 
 function MangaDetails() {

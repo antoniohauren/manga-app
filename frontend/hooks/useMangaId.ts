@@ -11,4 +11,4 @@ function useMangaId(): number | undefined {
   return undefined;
 }
 
-export default useMangaId;
+export { useMangaId };

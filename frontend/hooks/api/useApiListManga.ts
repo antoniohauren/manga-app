@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Manga } from '../../../src/manga/entities/manga.entity';
+import { Manga } from '@domain/manga/entities';
 
 type MangaDomain = Pick<Manga, 'id' | 'name' | 'author' | 'completed'> & {
   volumes: number;
@@ -21,4 +21,4 @@ function useApiListMangas(invalidate: boolean) {
   return mangas;
 }
 
-export default useApiListMangas;
+export { useApiListMangas };

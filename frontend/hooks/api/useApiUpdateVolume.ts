@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Dispatch, SetStateAction } from 'react';
-import { UpdateVolumeDto } from '../../../src/volume/dto/update-volume.dto';
+import { UpdateVolumeDto } from '@domain/volume/dto';
 
 export type UpdateVolume = Pick<UpdateVolumeDto, 'bought' | 'read'>;
 
@@ -17,4 +17,4 @@ function useApiUpdateVolume(setInvalidate: Dispatch<SetStateAction<boolean>>) {
   return { exec };
 }
 
-export default useApiUpdateVolume;
+export { useApiUpdateVolume };

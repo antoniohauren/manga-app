@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Dispatch, SetStateAction } from 'react';
-import { CreateVolumeDto } from '../../../src/volume/dto/create-volume.dto';
-import useMangaId from '../useMangaId';
+import { CreateVolumeDto } from '@domain/volume/dto';
+import { useMangaId } from '@hooks/useMangaId';
 
 function useApiCreateVolume(
   setInvalidate: Dispatch<SetStateAction<boolean>>,
@@ -26,4 +26,4 @@ function useApiCreateVolume(
   return { exec };
 }
 
-export default useApiCreateVolume;
+export { useApiCreateVolume };
