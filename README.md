@@ -1,3 +1,4 @@
+## Description
 - The backend is the project itself
 - The frontend is on the frontend folder
 
