@@ -3,6 +3,8 @@ import { CreateMangaDto } from '../../../src/manga/dto/create-manga.dto';
 import useApiCreateManga from '../../hooks/api/useApiCreateManga';
 import useApiUpdateManga from '../../hooks/api/useApiUpdateManga';
 import { UpsertMangaFormProps } from './UpsertMangaForm.types';
+import S from './UpsertMangaForm.module.scss';
+import CreateIcon from '../../assets/CreateIcon';
 
 function UpsertMangaForm({
   isUpdating = false,
@@ -40,8 +42,8 @@ function UpsertMangaForm({
   }, [defaultValues]);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form onSubmit={handleSubmit} className={S.wrapper}>
+      <label className={S.input}>
         Name
         <input
           value={name}
@@ -50,7 +52,7 @@ function UpsertMangaForm({
         />
       </label>
 
-      <label>
+      <label className={S.input}>
         Author
         <input
           value={author}
@@ -59,7 +61,7 @@ function UpsertMangaForm({
         />
       </label>
 
-      <label>
+      <label className={S.check}>
         <input
           type="checkbox"
           checked={completed}
@@ -67,7 +69,8 @@ function UpsertMangaForm({
         />
         Completed
       </label>
-      <button>Cadastrar</button>
+
+      <button>Create Manga</button>
     </form>
   );
 }

@@ -1,43 +1,47 @@
 @import '../../styles/variables.scss';
 
 .wrapper {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 
-    button {
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
+  button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
 }
 
 .row {
-    background-color: $dark-color;
-    padding-inline: 1rem;
-    color: $light-text;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  background-color: $dark-color;
+  padding-inline: 1rem;
+  color: $light-text;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1150px;
+
+  p {
     width: 100%;
-    max-width: 1150px;
+    min-width: 3rem;
+  }
 
-    p {
-        width: 100%;
-        min-width: 3rem;
-    }
+  p:first-of-type {
+    min-width: 30%;
+  }
 
-    p:first-of-type {
-        min-width: 30%;
-    }
-
-    p:nth-child(2) {
-        min-width: 30%;
-    }
+  p:nth-child(2) {
+    min-width: 30%;
+  }
 }
 
 .trash {
-    border: none;
-    background-color: transparent;
-    color: $dark-color;
+  border: none;
+  background-color: transparent;
+  color: $dark-color;
+
+  &:hover {
+    color: $light-text;
+  }
 }

@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 import CreateIcon from '../../assets/CreateIcon';
 import useApiCreateVolume from '../../hooks/api/useApiCreateVolume';
 import { VolumeFormProps } from './VolumeForm.types';
+import S from './VolumeForm.module.scss';
+import ReadIcon from '../../assets/ReadIcon';
+import CartIcon from '../../assets/CartIcon';
 
 function VolumeForm({ volumes, setInvalidate }: VolumeFormProps) {
   const [pages, setPages] = useState('');
@@ -27,41 +30,50 @@ function VolumeForm({ volumes, setInvalidate }: VolumeFormProps) {
   }, [volumes]);
 
   return (
-    <form>
-      <label>
+    <form className={S.wrapper}>
+      <label className={S.input}>
         Number of pages:
-        <input value={pages} onChange={(e) => setPages(e.target.value)} />
+        <input
+          value={pages}
+          onChange={(e) => {
+            const value = e.target.value.replace(/\D/g, '');
+            setPages(value);
+          }}
+        />
       </label>
 
-      <label>
+      <label className={S.input}>
         Volume number:
         <input
           value={volNumber}
-          onChange={(e) => setVolNumber(+e.target.value)}
+          onChange={(e) => {
+            const value = e.target.value.replace(/\D/g, '');
+            setVolNumber(+value);
+          }}
         />
       </label>
 
-      <label>
-        <input
-          type="checkbox"
-          checked={read}
-          onChange={(e) => setRead(e.target.checked)}
-        />
-        Read
-      </label>
+      <div className={S.buttons}>
+        <button
+          type="button"
+          onClick={() => setRead((value) => !value)}
+          className={read ? S.on : S.off}
+        >
+          <ReadIcon />
+        </button>
 
-      <label>
-        <input
-          type="checkbox"
-          checked={bought}
-          onChange={(e) => setBought(e.target.checked)}
-        />
-        Bought
-      </label>
+        <button
+          type="button"
+          onClick={() => setBought((value) => !value)}
+          className={bought ? S.on : S.off}
+        >
+          <CartIcon />
+        </button>
 
-      <button style={{ width: '40px' }} type="button" onClick={handleAddVolume}>
-        <CreateIcon />
-      </button>
+        <button className={S.add} type="button" onClick={handleAddVolume}>
+          <CreateIcon />
+        </button>
+      </div>
     </form>
   );
 }

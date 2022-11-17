@@ -55,7 +55,7 @@ function VolumeRow({
           <CartIcon />
         </button>
 
-        <button onClick={handleDelete}>
+        <button className={S.trash} onClick={handleDelete}>
           <TrashIcon />
         </button>
       </div>

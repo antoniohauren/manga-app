@@ -1,3 +1,47 @@
+@import '../../styles/variables.scss';
+
 .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
+    button {       
+        height: 3rem;
+        background-color: transparent;
+        border: 1px solid $dark-color;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        padding-inline: 2rem;
+        cursor: pointer;
+        
+        &:hover {
+            color: $light-text;
+            background-color: $dark-color;
+        }
+    }
+    
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 0.5rem;
+    margin-right: 1rem;
+
+    input {
+        border: 1px solid $dark-color;
+        border-radius: 0.2rem;
+        height: 2rem;
+        padding: 0.2rem 0.5rem;
+        outline: none;
+    }
+}
+
+.check {
+    flex-direction: row !important;
+    align-items: center;
+    width: 300px;
+    margin-top: auto;
+    padding-bottom: .5rem;
 }
