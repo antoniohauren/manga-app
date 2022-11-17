@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import BaseTemplate from '../../components/BaseTemplate';
-import VolumeRow from '../../components/VolumeRow';
-import VolumeForm from '../../components/VolumeForm';
-import UpsertMangaForm from '../../components/UpsertMangaForm';
+import BaseTemplate from '@components/BaseTemplate';
+import VolumeRow from '@components/VolumeRow';
+import VolumeForm from '@components/VolumeForm';
+import UpsertMangaForm from '@components/UpsertMangaForm';
 import { useApiGetManga } from '@hooks/api';
 import { useMangaId } from '@hooks/useMangaId';
 import { useState } from 'react';

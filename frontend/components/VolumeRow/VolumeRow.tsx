@@ -5,9 +5,9 @@ import {
   useApiUpdateVolume,
   UpdateVolume,
 } from '@hooks/api';
-import ReadIcon from '../../assets/ReadIcon';
-import CartIcon from '../../assets/CartIcon';
-import TrashIcon from '../../assets/TrashIcon';
+import ReadIcon from '@assets/ReadIcon';
+import CartIcon from '@assets/CartIcon';
+import TrashIcon from '@assets/TrashIcon';
 
 function VolumeRow({
   id,

@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import BaseTemplate from '../../components/BaseTemplate';
-import UpsertMangaForm from '../../components/UpsertMangaForm';
+import BaseTemplate from '@components/BaseTemplate';
+import UpsertMangaForm from '@components/UpsertMangaForm';
 
 function NewMangaPage() {
   return (
