@@ -45,13 +45,8 @@ export class VolumeService {
     return this.prisma.volume.update({
       where: { id },
       data: {
-        number_pages: updateVolumeDto.number_pages,
-        volume_number: updateVolumeDto.volume_number,
-        manga: {
-          connect: {
-            id: updateVolumeDto.mangaId,
-          },
-        },
+        bought: updateVolumeDto.bought,
+        read: updateVolumeDto.read,
       },
     });
   }
